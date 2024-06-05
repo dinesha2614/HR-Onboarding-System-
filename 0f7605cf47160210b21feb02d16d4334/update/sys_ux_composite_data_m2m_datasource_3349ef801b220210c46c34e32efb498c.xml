@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_m2m_datasource">
+    <sys_ux_composite_data_m2m_datasource action="INSERT_OR_UPDATE">
+        <dataset display_value="Custom Portal Landing - My Tasks Dataset">3749ef802c2202107261753d797f8b8e</dataset>
+        <datasource display_value="Custom Portal Landing - My Tasks Datasource (Task table)">ff49ef80b9220210a77b2b826229758c</datasource>
+        <sys_class_name>sys_ux_composite_data_m2m_datasource</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2024-05-29 04:04:05</sys_created_on>
+        <sys_id>3349ef801b220210c46c34e32efb498c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_composite_data_m2m_datasource_3349ef801b220210c46c34e32efb498c</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-05-29 04:04:05</sys_updated_on>
+    </sys_ux_composite_data_m2m_datasource>
+</record_update>

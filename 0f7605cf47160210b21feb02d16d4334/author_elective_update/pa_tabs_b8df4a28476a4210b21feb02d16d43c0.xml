@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="DELETE">
+        <canvas_page/>
+        <name>HR Dashboard - New Tab</name>
+        <page/>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 10:50:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b8df4a28476a4210b21feb02d16d43c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HR Dashboard - New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>pa_tabs_b8df4a28476a4210b21feb02d16d43c0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:50:00</sys_updated_on>
+    </pa_tabs>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</application>
+        <file_path/>
+        <instance_id>ab92d7241b7631909377eb9b2d4bcbdc</instance_id>
+        <instance_name>dev225471</instance_name>
+        <name>pa_tabs_b8df4a28476a4210b21feb02d16d43c0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs"><pa_tabs action="INSERT_OR_UPDATE"><canvas_page/><name>HR Dashboard - New Tab</name><page/><sys_class_name>pa_tabs</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-05-30 10:50:00</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>b8df4a28476a4210b21feb02d16d43c0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>HR Dashboard - New Tab</sys_name><sys_overrides/><sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package><sys_policy/><sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope><sys_update_name>pa_tabs_b8df4a28476a4210b21feb02d16d43c0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-05-30 10:50:00</sys_updated_on></pa_tabs></record_update>]]></payload>
+        <payload_hash>-619217748</payload_hash>
+        <record_name>HR Dashboard - New Tab</record_name>
+        <reverted_from/>
+        <source>cf7605cf47160210b21feb02d16d4336</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 10:51:37</sys_created_on>
+        <sys_id>a0301268476a4210b21feb02d16d43b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fc92072460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:51:37</sys_updated_on>
+        <type>Tab</type>
+        <update_guid>b4df4a28bc6a42103168d01f7382bdc2</update_guid>
+        <update_guid_history>b4df4a28bc6a42103168d01f7382bdc2:293873033,b4df4a28bc6a42103168d01f7382bdc2:293873033,b4df4a28bc6a42103168d01f7382bdc2:293873033</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HR Dashboard - New Tab">a4301268476a4210b21feb02d16d43bf</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 10:51:38</sys_created_on>
+        <sys_db_object display_value="" name="pa_tabs">pa_tabs</sys_db_object>
+        <sys_id>02a3e4552f8343588064c1ef1be9eb90</sys_id>
+        <sys_metadata>b8df4a28476a4210b21feb02d16d43c0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HR Dashboard - New Tab</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_scope_delete display_value="">79e1b23d29ae4eb1b9589d8e03024c79</sys_scope_delete>
+        <sys_update_name>pa_tabs_b8df4a28476a4210b21feb02d16d43c0</sys_update_name>
+        <sys_update_version display_value="pa_tabs_b8df4a28476a4210b21feb02d16d43c0">a0301268476a4210b21feb02d16d43b1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:51:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

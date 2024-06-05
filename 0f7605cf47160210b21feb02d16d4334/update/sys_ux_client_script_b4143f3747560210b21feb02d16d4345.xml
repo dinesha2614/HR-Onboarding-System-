@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes>27cf37e1097c4510f8771350f7e25cf9</includes>
+        <macroponent display_value="SOW landing page header">6414fb3747560210b21feb02d16d43bf</macroponent>
+        <name>FormMessage</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : "",
+  "message" : "Your quality score is at {0} this week.",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "You have closed {0} incidents in this week.",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Keep up the good work!",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Great work!",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Your first call resolution is at {0} this week.",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "You are awesome!",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Your customer satisfaction score is at {0} this week.",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Your average handle time is at {0} this week.",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+async function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    const perfHeaderUtils = imports['sn_sow_inc.SowPerfHeaderUtils']();
+    let positiveMsgs = [];
+    positiveMsgs.push(await helpers.translate('Great work!'));
+    positiveMsgs.push(await helpers.translate('You are awesome!'));
+    positiveMsgs.push(await helpers.translate('Keep up the good work!'));
+    let kpiDetails;
+    if(api.data.get_kpi_details_for_user.output && api.data.get_kpi_details_for_user.output.kpiTargets)
+        kpiDetails = api.data.get_kpi_details_for_user.output.kpiTargets.kpiDetails;
+    if(!kpiDetails)
+        return;
+    const rows = api.data.get_agent_kpi_scores.output.result.rows;
+    const scores = perfHeaderUtils.getScoresForUser(rows, api.context.session.user.sys_id);
+    const validPerfMetrics = perfHeaderUtils.getPerfMetricsExceedingTarget(kpiDetails, scores);
+    let validPerfMetricsList = [];
+    for (let x in validPerfMetrics)
+        validPerfMetricsList.push(x);
+    if (validPerfMetricsList.length === 0)
+        return;
+    let kpiChosen = validPerfMetricsList[Math.floor(Math.random() * validPerfMetricsList.length)];
+    let perfMetricMsg;
+    switch (kpiChosen) {
+        case 'Quality':
+            perfMetricMsg = await helpers.translate('Your quality score is at {0} this week.', validPerfMetrics['Quality']);
+            break;
+        case 'Average customer satisfaction':
+            perfMetricMsg = await helpers.translate('Your customer satisfaction score is at {0} this week.', validPerfMetrics['Average customer satisfaction']);
+            break;
+        case 'First call resolution':
+            perfMetricMsg = await helpers.translate('Your first call resolution is at {0} this week.', validPerfMetrics['First call resolution']);
+            break;
+        case 'Closed incidents':
+            perfMetricMsg = await helpers.translate('You have closed {0} incidents in this week.', validPerfMetrics['Closed incidents']);
+            break;
+        case 'Average handle time':
+            perfMetricMsg = await helpers.translate('Your average handle time is at {0} this week.', validPerfMetrics['Average handle time']);
+     }
+    if(!perfMetricMsg)
+        return;
+    let metricText = perfMetricMsg + ' ' + positiveMsgs[Math.floor(Math.random() * positiveMsgs.length)];
+    api.setState('metricText', metricText);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 10:12:33</sys_created_on>
+        <sys_id>b4143f3747560210b21feb02d16d4345</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FormMessage</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_client_script_b4143f3747560210b21feb02d16d4345</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 10:12:33</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

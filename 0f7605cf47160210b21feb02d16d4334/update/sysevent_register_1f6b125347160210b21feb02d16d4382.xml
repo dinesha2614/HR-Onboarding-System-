@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <description/>
+        <event_name>x_1321670_onboard.approval_reminder</event_name>
+        <fired_by>Flow designer approval reminder</fired_by>
+        <queue/>
+        <suffix>approval_reminder</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-26 14:29:34</sys_created_on>
+        <sys_id>1f6b125347160210b21feb02d16d4382</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1321670_onboard.approval_reminder</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sysevent_register_1f6b125347160210b21feb02d16d4382</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-26 14:29:34</sys_updated_on>
+        <table>sysapproval_approver</table>
+    </sysevent_register>
+</record_update>

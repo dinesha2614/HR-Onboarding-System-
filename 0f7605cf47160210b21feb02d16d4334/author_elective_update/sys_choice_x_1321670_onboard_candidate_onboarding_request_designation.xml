@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="designation" table="x_1321670_onboard_candidate_onboarding_request" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>designation</element>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 02:52:13</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>designation</sys_name>
+            <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+            <sys_update_name>sys_choice_x_1321670_onboard_candidate_onboarding_request_designation</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 02:52:13</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>software  development department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Associate Engineer</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 02:52:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:30:11</sys_updated_on>
+            <value>associate engineer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>software  development department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Engineer</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 02:52:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:30:17</sys_updated_on>
+            <value>engineer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>finance depatment</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Intern</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 03:25:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:37:56</sys_updated_on>
+            <value>intern</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>software  development department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Software Engineer</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 02:52:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:30:30</sys_updated_on>
+            <value>software engineer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>software  development department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Project Manager</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 02:52:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:30:38</sys_updated_on>
+            <value>project manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>software  development department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Business Analyst</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 02:52:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:30:44</sys_updated_on>
+            <value>business analyst</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>sales department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>BID Manager</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 03:33:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:41:52</sys_updated_on>
+            <value>BID manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>facilities department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Executive</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 03:35:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:42:10</sys_updated_on>
+            <value>executive</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>hr department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HR Director</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 03:32:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:42:22</sys_updated_on>
+            <value>hr director</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>hr department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HR Manager</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 03:30:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:42:31</sys_updated_on>
+            <value>hr manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>it department</dependent_value>
+            <element>designation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IT Engineer</label>
+            <language>en</language>
+            <name>x_1321670_onboard_candidate_onboarding_request</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-05-30 03:36:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-05-30 03:42:42</sys_updated_on>
+            <value>IT engineer</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

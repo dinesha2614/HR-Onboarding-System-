@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="SOW landing page header">6414fb3747560210b21feb02d16d43bf</macroponent>
+        <name>InvokeGetKPIDetails</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    if (event.name == 'MACROPONENT_PROPERTY_CHANGED' && event.payload.name != 'performancePluginActive')
+            return;
+    if (api.data.get_service_desk_agent_shift.output && api.data.get_service_desk_agent_shift.output.nearestShift)
+        return;
+    if (api.context.props.performancePluginActive) {
+        const {
+            NowDateTime
+        } = imports['sn_uxf.core_libraries']();
+        let startDate = NowDateTime.utc().subtract(7, 'days');
+        let endDate = NowDateTime.utc();
+        api.setState('startDate', startDate.$y + "-" + ("0" + (startDate.$M+1)).slice(-2) + "-" + ("0" + startDate.$D).slice(-2));
+        api.setState('endDate', endDate.$y + "-" + ("0" + (endDate.$M+1)).slice(-2) + "-" + ("0" + endDate.$D).slice(-2));
+        api.setState('serviceDeskGroup','f31b182fb3210010ed7fc9c316a8dc2a');
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 10:12:35</sys_created_on>
+        <sys_id>55143f3747560210b21feb02d16d43ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>InvokeGetKPIDetails</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_client_script_55143f3747560210b21feb02d16d43ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 10:12:35</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

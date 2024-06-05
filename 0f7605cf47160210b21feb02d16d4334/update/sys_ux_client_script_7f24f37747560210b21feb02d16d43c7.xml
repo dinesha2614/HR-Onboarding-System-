@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes>a1dcc9e7b77c3010e69dbc16de11a93b,3eccb12bb7703010e69dbc16de11a9a1</includes>
+        <macroponent display_value="SOW Overview">5724f37747560210b21feb02d16d431b</macroponent>
+        <name>UpdateCurrentVizSelection</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+async function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    var currentVizSelection = {};
+    var previousVizSelection = api.state.previousVizSelection;
+    var teamsMode = false;
+    var serviceDeskUtils = imports['sn_sow_inc.SowIncidentLandingPageUtils']();
+    var sowUtils = imports['sn_sow.SowUtils']();
+    if (event.payload) {
+        teamsMode = (event.payload.value[0] === "your_team_work");
+    }
+    if (!previousVizSelection.elementId) {
+        currentVizSelection = await serviceDeskUtils.getVisualisationCardConfig("incident_assigned", helpers, event.payload.value[0]);
+    } else {
+        if (!previousVizSelection.query)
+            currentVizSelection = await serviceDeskUtils.getVisualisationCardConfig(previousVizSelection.elementId, helpers, event.payload.value[0]);
+        else {
+            var nameValueMap = sowUtils.getNameValueMap(previousVizSelection.query);
+            previousVizSelection.query = await serviceDeskUtils.getVisualisationCardQuery(previousVizSelection, nameValueMap, helpers, event.payload.value[0]);
+            currentVizSelection = { ...previousVizSelection
+            };
+            if (currentVizSelection.table == 'task_sla')
+                currentVizSelection.title = await serviceDeskUtils.fetchTitleForSLA(previousVizSelection.rawQuery, api.state.reportRanges, helpers);
+            else currentVizSelection.title = await serviceDeskUtils.fetchTitle(currentVizSelection.table, nameValueMap, previousVizSelection.groupBy, teamsMode);
+        }
+    }
+    const translations = api.state.translations;
+    if (translations.hasOwnProperty(currentVizSelection.title))
+        currentVizSelection.title = translations[currentVizSelection.title];
+    api.setState('groupMode', teamsMode);
+    api.setState("currentVizSelection", currentVizSelection);
+
+    var jsonObj = [];
+    if (api.state.parFilters.length == 0) {
+        jsonObj.push({
+            "order": 100,
+            "type": "boolean",
+            "apply_to": ["incident.active"],
+            "values": ["true"]
+        });
+    }
+    api.setState('parFilters', () => jsonObj);
+    api.setState('pageCursor', () => 'init');
+    api.setState('pageNumber', () => 0);
+    api.setState('listRefreshRequested', {
+        timestamp: new Date().getTime()
+    });
+    api.data.get_datetime_now.refresh();
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 10:13:01</sys_created_on>
+        <sys_id>7f24f37747560210b21feb02d16d43c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>UpdateCurrentVizSelection</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_client_script_7f24f37747560210b21feb02d16d43c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 10:13:01</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 09:29:45</sys_created_on>
+        <sys_id>754ae3bb47160210b21feb02d16d4319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x.1321670.hr-onboarding-system.*.canvas_user</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_security_acl display_value="x.1321670.hr-onboarding-system.*">f54ae3bb47160210b21feb02d16d4315</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_754ae3bb47160210b21feb02d16d4319</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 09:29:45</sys_updated_on>
+        <sys_user_role display_value="canvas_user" name="canvas_user">8536f54bc713330072b211d4d8c26080</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
