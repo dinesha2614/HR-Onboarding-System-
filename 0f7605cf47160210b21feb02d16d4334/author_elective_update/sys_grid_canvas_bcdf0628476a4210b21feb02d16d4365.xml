@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas">
+    <sys_grid_canvas action="DELETE">
+        <legacy_page display_value="PA HR Dashboard - New Tab">b8df0628476a4210b21feb02d16d4364</legacy_page>
+        <name>PA HR Dashboard - New Tab</name>
+        <sys_class_name>sys_grid_canvas</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 10:50:00</sys_created_on>
+        <sys_id>bcdf0628476a4210b21feb02d16d4365</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA HR Dashboard - New Tab</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_grid_canvas_bcdf0628476a4210b21feb02d16d4365</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:50:00</sys_updated_on>
+    </sys_grid_canvas>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</application>
+        <file_path/>
+        <instance_id>ab92d7241b7631909377eb9b2d4bcbdc</instance_id>
+        <instance_name>dev225471</instance_name>
+        <name>sys_grid_canvas_bcdf0628476a4210b21feb02d16d4365</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas"><sys_grid_canvas action="INSERT_OR_UPDATE"><legacy_page display_value="PA HR Dashboard - New Tab">b8df0628476a4210b21feb02d16d4364</legacy_page><name>PA HR Dashboard - New Tab</name><sys_class_name>sys_grid_canvas</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-05-30 10:50:00</sys_created_on><sys_id>bcdf0628476a4210b21feb02d16d4365</sys_id><sys_mod_count>0</sys_mod_count><sys_name>PA HR Dashboard - New Tab</sys_name><sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package><sys_policy/><sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope><sys_update_name>sys_grid_canvas_bcdf0628476a4210b21feb02d16d4365</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-05-30 10:50:00</sys_updated_on></sys_grid_canvas></record_update>]]></payload>
+        <payload_hash>1515112035</payload_hash>
+        <record_name>PA HR Dashboard - New Tab</record_name>
+        <reverted_from/>
+        <source>cf7605cf47160210b21feb02d16d4336</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 10:50:00</sys_created_on>
+        <sys_id>70df0628476a4210b21feb02d16d4368</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fc91ef7460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:50:00</sys_updated_on>
+        <type>Grid Canvas</type>
+        <update_guid>b4df06289c6a421021a978d1c75f5367</update_guid>
+        <update_guid_history>b4df06289c6a421021a978d1c75f5367:1515112035</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-30 10:51:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_grid_canvas">sys_grid_canvas</sys_db_object>
+        <sys_id>10378f2f92d44911886f4a259e7523f1</sys_id>
+        <sys_metadata>bcdf0628476a4210b21feb02d16d4365</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA HR Dashboard - New Tab</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_scope_delete display_value="">79e1b23d29ae4eb1b9589d8e03024c79</sys_scope_delete>
+        <sys_update_name>sys_grid_canvas_bcdf0628476a4210b21feb02d16d4365</sys_update_name>
+        <sys_update_version display_value="sys_grid_canvas_bcdf0628476a4210b21feb02d16d4365">70df0628476a4210b21feb02d16d4368</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-30 10:51:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

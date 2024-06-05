@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Service desk landing page custom">3304f73747560210b21feb02d16d439b</macroponent>
+        <name>Load WFO Content</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    const showPerformanceTarget = api.data.wfo_team_performance_plugin_status.output &&
+                            api.data.wfo_team_performance_plugin_status.output.active;
+    const showlearningPath = api.data.wfo_learning_plugin_status.output && 
+                            api.data.wfo_learning_plugin_status.output.active;
+
+    if (showPerformanceTarget) {
+        api.setState("showPerformanceTarget", showPerformanceTarget);
+        api.emit('MACROPONENT_VIEWPORT_LOAD_REQUESTED', {
+            viewportElementId: 'viewport_nwr',
+            route: 'performance-target',
+            fields: null,
+            params: null
+        });
+    }
+
+    if (showlearningPath) {
+        api.setState("showLearningPath", showlearningPath);
+        api.emit('MACROPONENT_VIEWPORT_LOAD_REQUESTED', {
+            viewportElementId: 'viewport_lyb',
+            route: 'learning-path-widget',
+            fields: null,
+            params: null
+        });
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 10:12:31</sys_created_on>
+        <sys_id>9c14fb3747560210b21feb02d16d4391</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Load WFO Content</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_client_script_9c14fb3747560210b21feb02d16d4391</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 10:12:31</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

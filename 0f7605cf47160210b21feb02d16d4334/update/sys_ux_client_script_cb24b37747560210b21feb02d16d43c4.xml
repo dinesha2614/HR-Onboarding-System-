@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Welcome SOW">3a24b37747560210b21feb02d16d43ac</macroponent>
+        <name>ShowInitialTour</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    const tourData = api.data.look_up_user_tour.result;
+    let showTour = true;
+
+    if (tourData && tourData.preferences) {
+        const preferences = tourData.preferences;
+        for (let index in preferences) {
+            if (preferences[index].name === 'sow.incident.landing_page_hide_tour' && preferences[index].value === 'true') {
+                showTour = false;
+            }
+        }
+    }
+
+    if (showTour) {
+        api.emit('SN_HELP#GUIDANCE_START_REQUESTED', {"guidanceId": "02b2972e778201100bfdaeb4bb5a99c5"});
+
+        api.data.save_user_preference.execute({
+            "name": "sow.incident.landing_page_hide_tour",
+            "value": true
+        });
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 10:12:58</sys_created_on>
+        <sys_id>cb24b37747560210b21feb02d16d43c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ShowInitialTour</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_client_script_cb24b37747560210b21feb02d16d43c4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 10:12:58</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

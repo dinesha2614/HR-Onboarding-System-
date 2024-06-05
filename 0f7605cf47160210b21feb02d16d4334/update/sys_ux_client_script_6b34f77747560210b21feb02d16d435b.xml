@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes>a1dcc9e7b77c3010e69dbc16de11a93b</includes>
+        <macroponent display_value="SOW Overview">5724f37747560210b21feb02d16d431b</macroponent>
+        <name>UpdateDonutsConfig</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : "",
+  "message" : "Incidents assigned to my team",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Open catalog tasks assigned to my team",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "In Progress incidents assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "P5 unassigned incidents",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "P1 unassigned incidents",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Catalog tasks assigned to my team",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Resolved incidents assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Open catalog tasks assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "On Hold incidents assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Incident SLAs",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Work in progress catalog tasks assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Catalog tasks assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "P2 unassigned incidents",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Resolved incidents assigned to my team",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Pending catalog tasks assigned to my team",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "P3 unassigned incidents",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "On Hold incidents assigned to my team",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "New incidents assigned to my team",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Incidents assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Pending catalog tasks assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "In Progress incidents assigned to my team",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Unassigned incidents",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "P4 unassigned incidents",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "New incidents assigned to me",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Work in progress catalog tasks assigned to my team",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+async function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+    let translations = api.state.translations || {};
+    if (Object.keys(translations).length == 0) {
+        translations = {
+            "Incidents assigned to me": await helpers.translate("Incidents assigned to me"),
+            "Incidents assigned to my team": await helpers.translate("Incidents assigned to my team"),
+            "Incident SLAs": await helpers.translate("Incident SLAs"),
+            "Unassigned incidents": await helpers.translate("Unassigned incidents"),
+            "Catalog tasks assigned to me": await helpers.translate("Catalog tasks assigned to me"),
+            "Catalog tasks assigned to my team": await helpers.translate("Catalog tasks assigned to my team"),
+            "New incidents assigned to me": await helpers.translate("New incidents assigned to me"),
+            "In Progress incidents assigned to me": await helpers.translate("In Progress incidents assigned to me"),
+            "On Hold incidents assigned to me": await helpers.translate("On Hold incidents assigned to me"),
+            "Resolved incidents assigned to me": await helpers.translate("Resolved incidents assigned to me"),
+            "P1 unassigned incidents": await helpers.translate("P1 unassigned incidents"),
+            "P2 unassigned incidents": await helpers.translate("P2 unassigned incidents"),
+            "P3 unassigned incidents": await helpers.translate("P3 unassigned incidents"),
+            "P4 unassigned incidents": await helpers.translate("P4 unassigned incidents"),
+            "P5 unassigned incidents": await helpers.translate("P5 unassigned incidents"),
+            "Pending catalog tasks assigned to me": await helpers.translate("Pending catalog tasks assigned to me"),
+            "Open catalog tasks assigned to me": await helpers.translate("Open catalog tasks assigned to me"),
+            "Work in progress catalog tasks assigned to me": await helpers.translate("Work in progress catalog tasks assigned to me"),
+            "New incidents assigned to my team": await helpers.translate("New incidents assigned to my team"),
+            "In Progress incidents assigned to my team": await helpers.translate("In Progress incidents assigned to my team"),
+            "On Hold incidents assigned to my team": await helpers.translate("On Hold incidents assigned to my team"),
+            "Resolved incidents assigned to my team": await helpers.translate("Resolved incidents assigned to my team"),
+            "Pending catalog tasks assigned to my team": await helpers.translate("Pending catalog tasks assigned to my team"),
+            "Open catalog tasks assigned to my team": await helpers.translate("Open catalog tasks assigned to my team"),
+            "Work in progress catalog tasks assigned to my team": await helpers.translate("Work in progress catalog tasks assigned to my team")
+        };
+        api.setState("translations", translations);
+    }
+    var currentVizSelection = api.state.currentVizSelection;
+    if (translations.hasOwnProperty(currentVizSelection.title)) {
+        currentVizSelection = { ...currentVizSelection,
+            title: translations[currentVizSelection.title]
+        };
+        api.setState("currentVizSelection", currentVizSelection);
+    }
+    const landingPageUtils = imports['sn_sow_inc.SowIncidentLandingPageUtils']();
+    const donutConfig = await landingPageUtils.getDonutConfig(helpers, 'your_work');
+    const workPersonaConfig = await landingPageUtils.getWorkPersonaConfig(helpers);
+
+    api.setState("donutConfig", donutConfig);
+    api.setState("workPersonaConfig", workPersonaConfig);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 10:13:17</sys_created_on>
+        <sys_id>6b34f77747560210b21feb02d16d435b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>UpdateDonutsConfig</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_client_script_6b34f77747560210b21feb02d16d435b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 10:13:17</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

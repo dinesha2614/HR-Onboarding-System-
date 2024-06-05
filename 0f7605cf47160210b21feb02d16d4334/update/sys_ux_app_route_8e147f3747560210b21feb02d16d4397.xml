@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="Service Operations Workspace">4d69d0ed73c4301045216238edf6a7ea</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>Announcement</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Service desk landing page custom">3304f73747560210b21feb02d16d439b</parent_macroponent>
+        <parent_macroponent_composition_element_id>viewport_xio</parent_macroponent_composition_element_id>
+        <route_type>announcement</route_type>
+        <screen_type display_value="Announcement">bd147f3747560210b21feb02d16d434c</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-28 10:12:39</sys_created_on>
+        <sys_id>8e147f3747560210b21feb02d16d4397</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Announcement</sys_name>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_app_route_8e147f3747560210b21feb02d16d4397</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-28 10:12:39</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=8e147f3747560210b21feb02d16d4397"/>
+</record_update>

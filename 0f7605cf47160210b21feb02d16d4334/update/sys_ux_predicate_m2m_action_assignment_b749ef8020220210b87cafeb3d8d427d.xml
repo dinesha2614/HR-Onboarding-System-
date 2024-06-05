@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_predicate_m2m_action_assignment">
+    <sys_ux_predicate_m2m_action_assignment action="INSERT_OR_UPDATE">
+        <declarative_action_assignment display_value="reject">4c59ef80242202107a5caf805bdee8eb</declarative_action_assignment>
+        <predicate display_value="My Tasks">7b49ef8027220210f46fe1fa1a27fe86</predicate>
+        <sys_class_name>sys_ux_predicate_m2m_action_assignment</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2024-05-29 04:04:05</sys_created_on>
+        <sys_id>b749ef8020220210b87cafeb3d8d427d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_predicate_m2m_action_assignment_b749ef8020220210b87cafeb3d8d427d</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-05-29 04:04:05</sys_updated_on>
+    </sys_ux_predicate_m2m_action_assignment>
+</record_update>

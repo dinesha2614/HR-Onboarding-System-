@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="28a7094347560210b21feb02d16d437c" extends="sc_request" label="Candidate Onboarding Request" max_length="40" name="x_1321670_onboard_candidate_onboarding_request" type="collection">
+        <element label="Address" max_length="40" name="address" type="string"/>
+        <element label="Date of Birth" max_length="40" name="date_of_birth" type="glide_date"/>
+        <element choice="3" default="sales department" label="Department" max_length="40" name="department" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Sales Department" sequence="0" value="sales department"/>
+                <element inactive_on_update="false" label="HR Department" sequence="1" value="hr department"/>
+                <element inactive_on_update="false" label="Finance Depatment" sequence="2" value="finance depatment"/>
+                <element inactive_on_update="false" label="Facilities Department" sequence="3" value="facilities department"/>
+                <element inactive_on_update="false" label="Software  Development Department" sequence="4" value="software  development department"/>
+                <element inactive_on_update="false" label="IT Department" sequence="5" value="it department"/>
+            </choice>
+        </element>
+        <element choice="3" default="BID Manager" dependent="department" dependent_on_field="department" label="Designation" max_length="40" name="designation" type="choice" use_dependent_field="true">
+            <choice>
+                <element dependent_value="software  development department" inactive_on_update="false" label="Associate Engineer" sequence="0" value="associate engineer"/>
+                <element dependent_value="software  development department" inactive_on_update="false" label="Engineer" sequence="1" value="engineer"/>
+                <element dependent_value="finance depatment" inactive_on_update="false" label="Intern" sequence="2" value="intern"/>
+                <element dependent_value="software  development department" inactive_on_update="false" label="Software Engineer" sequence="3" value="software engineer"/>
+                <element dependent_value="software  development department" inactive_on_update="false" label="Project Manager" sequence="4" value="project manager"/>
+                <element dependent_value="software  development department" inactive_on_update="false" label="Business Analyst" sequence="5" value="business analyst"/>
+                <element dependent_value="sales department" inactive_on_update="false" label="BID Manager" sequence="6" value="BID manager"/>
+                <element dependent_value="facilities department" inactive_on_update="false" label="Executive" sequence="7" value="executive"/>
+                <element dependent_value="hr department" inactive_on_update="false" label="HR Director" sequence="8" value="hr director"/>
+                <element dependent_value="hr department" inactive_on_update="false" label="HR Manager" sequence="9" value="hr manager"/>
+                <element dependent_value="it department" inactive_on_update="false" label="IT Engineer" sequence="10" value="IT engineer"/>
+            </choice>
+        </element>
+        <element label="Email" max_length="40" name="email" type="string"/>
+        <element default="javascript:getNextObjNumberPadded();" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Employee ID" max_length="40" name="employee_id" type="string" use_dynamic_default="true"/>
+        <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element choice="1" label="Gender" max_length="40" name="gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Male" sequence="0" value="male"/>
+                <element inactive_on_update="false" label="Female" sequence="1" value="female"/>
+            </choice>
+        </element>
+        <element label="Hire Date" max_length="40" name="hire_date" type="glide_date"/>
+        <element label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="Salary" max_length="20" name="salary" type="currency"/>
+    </element>
+</database>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_m2m_predicate_bundle">
+    <sys_ux_composite_data_m2m_predicate_bundle action="INSERT_OR_UPDATE">
+        <dataset display_value="Custom Portal Catalog Item page - Related Items dataset">3b49ef809922021078d306548de2bb8d</dataset>
+        <order/>
+        <predicate_bundle display_value="Custom portal - Related items">7b49ef803e2202106ef66d6254593589</predicate_bundle>
+        <sys_class_name>sys_ux_composite_data_m2m_predicate_bundle</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2024-05-29 04:04:02</sys_created_on>
+        <sys_id>fb49ef80402202105f9538ddd5eb7e8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="HR Onboarding System" source="x_1321670_onboard">0f7605cf47160210b21feb02d16d4334</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HR Onboarding System">0f7605cf47160210b21feb02d16d4334</sys_scope>
+        <sys_update_name>sys_ux_composite_data_m2m_predicate_bundle_fb49ef80402202105f9538ddd5eb7e8a</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-05-29 04:04:02</sys_updated_on>
+    </sys_ux_composite_data_m2m_predicate_bundle>
+</record_update>
